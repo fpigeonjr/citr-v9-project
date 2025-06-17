@@ -4,7 +4,7 @@ import Order from "./Order";
 import PizzaOfTheDay from "./PizzaOfTheDay";
 
 const App = () => (
-  <div style={{ maxWidth: "900px", padding: "10px" }}>
+  <div>
     <h1>Padre Gino's - Order Now</h1>
     <Order />
     <PizzaOfTheDay />
