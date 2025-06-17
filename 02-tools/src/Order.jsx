@@ -17,6 +17,19 @@ function Order() {
     price = intl.format(selectedPizza.sizes[pizzaSize]);
   }
 
+  async function checkout() {
+    setLoading(true);
+    await fetch("api/order", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ cart }),
+    });
+    setCart([]);
+    setLoading(false);
+  }
+
   async function fetchPizzaTypes() {
     const pizzaRes = await fetch("/api/pizzas");
     const pizzaJSON = await pizzaRes.json();
@@ -110,7 +123,7 @@ function Order() {
           </div>
         </form>
       </div>
-      {loading ? <h2>Loading...</h2> : <Cart cart={cart} />}
+      {loading ? <h2>Loading...</h2> : <Cart cart={cart} checkout={checkout} />}
     </div>
   );
 }
