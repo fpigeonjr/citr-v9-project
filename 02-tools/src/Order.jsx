@@ -33,7 +33,7 @@ function Order() {
   return (
     <div className="order">
       <h2>Create Order</h2>
-      <form action="">
+      <form>
         <div>
           <div>
             <label htmlFor="pizza-type">Pizza Type</label>
