@@ -3,6 +3,11 @@ import Cart from "../Cart";
 import { intl } from "../helpers";
 import Pizza from "../Pizza";
 import { CartContext } from "../contexts";
+import { createLazyFileRoute } from "@tanstack/react-router";
+
+export const Route = createLazyFileRoute("/order")({
+  component: Order,
+});
 
 function Order() {
   const [pizzaTypes, setPizzaTypes] = useState([]);
