@@ -1,8 +1,8 @@
 import { useEffect, useState, useContext } from "react";
-import Cart from "./Cart";
-import { intl } from "./helpers";
-import Pizza from "./Pizza";
-import { CartContext } from "./contexts";
+import Cart from "../Cart";
+import { intl } from "../helpers";
+import Pizza from "../Pizza";
+import { CartContext } from "../contexts";
 
 function Order() {
   const [pizzaTypes, setPizzaTypes] = useState([]);
