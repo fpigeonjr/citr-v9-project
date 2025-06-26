@@ -20,7 +20,6 @@ function ErrorBoundaryWrapperPastOrderRoutes() {
 }
 
 function PastOrdersRoute() {
-  // throw new Error("This is a test error for the past orders route");
   const [page, setPage] = useState(1);
   const [focusedOrder, setFocusedOrder] = useState();
   const { isLoading, data } = useQuery({
